@@ -106,6 +106,8 @@ These are all the API methods I've seen so far.  I try to cover any parameters f
 *  `recording/{RecordingID}[,{RecordingID}...]` - Takes a comma-separated list of recording IDs and returns metadata about each
 * `snapshot/recording/{CameraID}/{YYYY}/{MM}/{DD}/{RecordingID}` - Fetches a JPG thumbnail for the given recording from the given camera
 	* Optionally takes `width` parameter, with pixel width of thumbnail
+* `snapshot/camera/{CameraId}` - Fetches a current snapshot from the given camera
+	* Optionally takes `force=true` parameter, to skip the internal caching of snapshots
 * `recording/{RecordingID}/motion` - Fetches a PNG showing where motion was detected on the given recording
 	* Optionally takes `alpha` parameter.  If true, returns PNG with alpha channel and red marking areas of motion.  If false, returns PNG with black showing no motion and white showing motion.
 	* Response:
